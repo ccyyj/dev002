@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="com.fc.entity.Car">
+<property name="color" value="black" />
+    </bean>
+
+    <bean id="complexType" class="com.fc.entity.ComplexType">
+        <property name="objects">
+            <array>
+                <value>000</value>
+                <value>小白</value>
+                <value>true</value>
+                <value>00.00</value>
+                <value>开端</value>
+            </array>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>脉动</value>
+                <value>可口可乐</value>
+                <value>银梅口乐</value>
+                <value>酸梅汤</value>
+                <value>安慕希</value>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>25</value>
+                <value>36</value>
+                <value>18</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="person" value="小白" />
+                <entry key="car" value="car" />
+            </map>
+        </property>
+    </bean>
+
+</beans>
