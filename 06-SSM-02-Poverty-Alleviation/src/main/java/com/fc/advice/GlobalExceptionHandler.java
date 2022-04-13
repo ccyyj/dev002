@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
+import java.util.Map;
+
 // 用于对Controller进行增强
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -33,5 +36,18 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public ResultVO runtimeException(RuntimeException e) {
         return new ResultVO(5000, "系统操作异常，请稍后重试或者联系管理员", false, e.getMessage());
+    }
+
+    @ExceptionHandler(value = DuplicateKeyException.class)
+    @ResponseBody
+    public Map<String,Object> mysqlHandler(DuplicateKeyException e) {
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("code", -600);
+        map.put("message", "请求参数异常，使用了重复的值！");
+        map.put("success", false);
+        map.put("data", e);
+
+        return map;
     }
 }
