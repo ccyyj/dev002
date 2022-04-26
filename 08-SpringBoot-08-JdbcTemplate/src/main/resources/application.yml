@@ -1,0 +1,8 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rx2020?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimeZone=GTM+8
+    username: root
+    password: goodgoodstudy
