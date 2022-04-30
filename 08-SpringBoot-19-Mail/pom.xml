@@ -9,14 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fc</groupId>
-    <artifactId>08-SpringBoot-16-i18n</artifactId>
+    <artifactId>08-SpringBoot-19-Mail</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>08-SpringBoot-16-i18n</name>
-    <description>Demo project for gBoot-16-i18n</description>
+    <name>08-SpringBoot-19-Mail</name>
+    <description>Demo project for 08-SpringBoot-19-Mail</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!--SpringBoot整合邮件发送-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -27,11 +32,6 @@
             <version>3.6.0</version>
         </dependency>
         <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>3.3.7</version>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -39,7 +39,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
