@@ -2,7 +2,7 @@ package com.fc.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fc.Person;
+import com.fc.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -129,11 +129,11 @@ public class ResponseController {
     @RequestMapping(value = "testJsonObject", produces = "application/json; charset=UTF-8")
     @ResponseBody
     public String testJsonObject() {
-        Person user = new Person();
+        User user = new User();
         user.setName("易烊千玺");
         user.setAge(22);
         user.setGender("男");
-        //user.setBirthday(new Date());
+        user.setBirthday(new Date());
         user.setInfo("四个字");
 
         // 获取对象映射器
@@ -154,12 +154,12 @@ public class ResponseController {
 
     @RequestMapping(value = "testObject", produces = "application/json; charset=UTF-8")
     @ResponseBody
-    public Person testObject() {
-        Person user = new Person();
+    public User testObject() {
+        User user = new User();
         user.setName("易烊千玺");
         user.setAge(22);
         user.setGender("男");
-     //   user.setBirthday(new Date());
+        user.setBirthday(new Date());
         user.setInfo("四个字");
 
         return user;
@@ -168,11 +168,11 @@ public class ResponseController {
     @RequestMapping(value = "testMap", produces = "application/json; charset=UTF-8")
     @ResponseBody
     public Map<String, Object> testMap() {
-        Person user = new Person();
+        User user = new User();
         user.setName("易烊千玺");
         user.setAge(22);
         user.setGender("男");
-      //  user.setBirthday(new Date());
+        user.setBirthday(new Date());
         user.setInfo("四个字");
 
         List<String> foods = new ArrayList<>();

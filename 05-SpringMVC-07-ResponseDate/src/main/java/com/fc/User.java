@@ -6,11 +6,11 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class Person {
+public class User {
     private String name;
     private Integer age;
     private String gender;
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-//    private Date birthday;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date birthday;
     private String info;
 }
