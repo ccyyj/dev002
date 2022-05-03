@@ -1,7 +1,7 @@
 package com.fc.service;
 
-import com.fc.vo.UserVo;
+import com.fc.vo.UserVO;
 
 public interface UserService {
-    UserVo login(String username, String password);
+    UserVO login(String username, String password);
 }

@@ -7,7 +7,7 @@ import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.fc.entity.User;
 import com.fc.service.UserService;
 import com.fc.util.JwtUtil;
-import com.fc.vo.UserVo;
+import com.fc.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +23,7 @@ public class UserController {
 
     @RequestMapping("login")
     public Map<String, Object> login(User user) {
-        UserVo userVO = userService.login(user.getUsername(), user.getPassword());
+        UserVO userVO = userService.login(user.getUsername(), user.getPassword());
 
         Map<String, Object> map = new HashMap<>();
 
