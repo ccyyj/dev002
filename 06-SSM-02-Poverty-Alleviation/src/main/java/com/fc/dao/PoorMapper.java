@@ -37,5 +37,5 @@ public interface PoorMapper {
 
     int updateByPrimaryKey(Poor record);
 
-    Integer click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
+    Integer click(Long id, Date lastClickTime);
 }

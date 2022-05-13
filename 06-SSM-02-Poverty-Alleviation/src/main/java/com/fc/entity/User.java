@@ -1,13 +1,10 @@
 package com.fc.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.util.Date;
 
 public class User {
     private Long id;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     private String username;
@@ -105,4 +102,6 @@ public class User {
     public void setPhoto(String photo) {
         this.photo = photo == null ? null : photo.trim();
     }
+
+
 }

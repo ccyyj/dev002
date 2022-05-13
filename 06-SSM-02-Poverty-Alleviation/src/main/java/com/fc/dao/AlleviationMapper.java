@@ -36,5 +36,5 @@ public interface AlleviationMapper {
 
     int updateByPrimaryKey(Alleviation record);
 
-    Integer click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
+    Integer click(Long id, Date lastClickTime);
 }

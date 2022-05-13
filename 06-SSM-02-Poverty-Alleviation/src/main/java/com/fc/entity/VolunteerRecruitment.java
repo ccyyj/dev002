@@ -1,13 +1,10 @@
 package com.fc.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.util.Date;
 
 public class VolunteerRecruitment {
     private Long id;
 
-@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     private String total;
@@ -22,10 +19,8 @@ public class VolunteerRecruitment {
 
     private Integer recruitsNum;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date recruitsTime;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date recruitsEndTime;
 
     private String lead;
@@ -36,7 +31,6 @@ public class VolunteerRecruitment {
 
     private Date releaseDate;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date lastClickTime;
 
     private Integer clickNum;

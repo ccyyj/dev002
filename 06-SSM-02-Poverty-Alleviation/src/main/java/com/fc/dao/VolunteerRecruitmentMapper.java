@@ -36,5 +36,5 @@ public interface VolunteerRecruitmentMapper {
 
     int updateByPrimaryKey(VolunteerRecruitment record);
 
-    Integer click(@Param("id") Long id, @Param("lastClickTime") Date lastClickTime);
+    Integer click(Long id, Date lastClickTime);
 }
