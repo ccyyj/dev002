@@ -2,9 +2,13 @@ package com.fc.dao;
 
 import com.fc.entity.TbNote;
 import com.fc.entity.TbNoteExample;
-import java.util.List;
+import com.fc.vo.NoteVO;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+@Repository
 public interface TbNoteMapper {
     long countByExample(TbNoteExample example);
 
@@ -33,4 +37,12 @@ public interface TbNoteMapper {
     int updateByPrimaryKeyWithBLOBs(TbNote record);
 
     int updateByPrimaryKey(TbNote record);
+
+    List<TbNote> findNoteByUserId(@Param("userId") Integer userId, @Param("typeId") Integer typeId, @Param("title") String title, @Param("date") String date);
+
+    List<NoteVO> findCountByDate(Integer userId);
+
+    List<NoteVO> findCountByType(Integer userId);
+
+    NoteVO findById(Integer id);
 }

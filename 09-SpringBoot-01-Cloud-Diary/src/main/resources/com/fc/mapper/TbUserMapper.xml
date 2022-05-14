@@ -85,7 +85,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from tb_user
     where id = #{id,jdbcType=INTEGER}
@@ -101,10 +101,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.fc.entity.TbUser">
-    insert into tb_user (id, username, password, 
-      nick, head, mood)
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{nick,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{mood,jdbcType=VARCHAR})
+    insert into tb_user (id, username, password,
+                         nick, head, mood)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+            #{nick,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{mood,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fc.entity.TbUser">
     insert into tb_user
@@ -184,11 +184,11 @@
   <update id="updateByExample" parameterType="map">
     update tb_user
     set id = #{record.id,jdbcType=INTEGER},
-      username = #{record.username,jdbcType=VARCHAR},
-      password = #{record.password,jdbcType=VARCHAR},
-      nick = #{record.nick,jdbcType=VARCHAR},
-      head = #{record.head,jdbcType=VARCHAR},
-      mood = #{record.mood,jdbcType=VARCHAR}
+    username = #{record.username,jdbcType=VARCHAR},
+    password = #{record.password,jdbcType=VARCHAR},
+    nick = #{record.nick,jdbcType=VARCHAR},
+    head = #{record.head,jdbcType=VARCHAR},
+    mood = #{record.mood,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -217,10 +217,10 @@
   <update id="updateByPrimaryKey" parameterType="com.fc.entity.TbUser">
     update tb_user
     set username = #{username,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      nick = #{nick,jdbcType=VARCHAR},
-      head = #{head,jdbcType=VARCHAR},
-      mood = #{mood,jdbcType=VARCHAR}
+        password = #{password,jdbcType=VARCHAR},
+        nick = #{nick,jdbcType=VARCHAR},
+        head = #{head,jdbcType=VARCHAR},
+        mood = #{mood,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
